@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		341EC52C28BE97FC0095396F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341EC52B28BE97FC0095396F /* AppDelegate.swift */; };
 		341EC52E28BE97FC0095396F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341EC52D28BE97FC0095396F /* SceneDelegate.swift */; };
-		341EC53028BE97FC0095396F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341EC52F28BE97FC0095396F /* ViewController.swift */; };
-		341EC53328BE97FC0095396F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 341EC53128BE97FC0095396F /* Main.storyboard */; };
+		341EC53028BE97FC0095396F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341EC52F28BE97FC0095396F /* MainViewController.swift */; };
 		341EC53628BE97FC0095396F /* Expify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 341EC53428BE97FC0095396F /* Expify.xcdatamodeld */; };
 		341EC53828BE97FF0095396F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 341EC53728BE97FF0095396F /* Assets.xcassets */; };
 		341EC53B28BE97FF0095396F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 341EC53928BE97FF0095396F /* LaunchScreen.storyboard */; };
+		341EC54428BEA2660095396F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341EC54328BEA2660095396F /* MainCoordinator.swift */; };
+		341EC54828BEA2F10095396F /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341EC54728BEA2F10095396F /* MainViewModel.swift */; };
 		DEC610157B80155CE75D6ED6 /* Pods_Expify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0739A14C1B9CA8435EBE6D4 /* Pods_Expify.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,12 +22,13 @@
 		341EC52828BE97FC0095396F /* Expify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		341EC52B28BE97FC0095396F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		341EC52D28BE97FC0095396F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		341EC52F28BE97FC0095396F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		341EC53228BE97FC0095396F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		341EC52F28BE97FC0095396F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		341EC53528BE97FC0095396F /* Expify.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Expify.xcdatamodel; sourceTree = "<group>"; };
 		341EC53728BE97FF0095396F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		341EC53A28BE97FF0095396F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		341EC53C28BE97FF0095396F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		341EC54328BEA2660095396F /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		341EC54728BEA2F10095396F /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		A4C02683B4D71F603999638C /* Pods-Expify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expify.release.xcconfig"; path = "Target Support Files/Pods-Expify/Pods-Expify.release.xcconfig"; sourceTree = "<group>"; };
 		D0739A14C1B9CA8435EBE6D4 /* Pods_Expify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Expify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFEB6696B58EDBE912676EA2 /* Pods-Expify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expify.debug.xcconfig"; path = "Target Support Files/Pods-Expify/Pods-Expify.debug.xcconfig"; sourceTree = "<group>"; };
@@ -50,7 +52,6 @@
 				FFEB6696B58EDBE912676EA2 /* Pods-Expify.debug.xcconfig */,
 				A4C02683B4D71F603999638C /* Pods-Expify.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -75,16 +76,41 @@
 		341EC52A28BE97FC0095396F /* Expify */ = {
 			isa = PBXGroup;
 			children = (
+				341EC54228BEA2570095396F /* Coordinators */,
+				341EC54528BEA2C90095396F /* Flow */,
 				341EC52B28BE97FC0095396F /* AppDelegate.swift */,
 				341EC52D28BE97FC0095396F /* SceneDelegate.swift */,
-				341EC52F28BE97FC0095396F /* ViewController.swift */,
-				341EC53128BE97FC0095396F /* Main.storyboard */,
 				341EC53728BE97FF0095396F /* Assets.xcassets */,
 				341EC53928BE97FF0095396F /* LaunchScreen.storyboard */,
 				341EC53C28BE97FF0095396F /* Info.plist */,
 				341EC53428BE97FC0095396F /* Expify.xcdatamodeld */,
 			);
 			path = Expify;
+			sourceTree = "<group>";
+		};
+		341EC54228BEA2570095396F /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				341EC54328BEA2660095396F /* MainCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		341EC54528BEA2C90095396F /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				341EC54628BEA2E30095396F /* Main */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		341EC54628BEA2E30095396F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				341EC52F28BE97FC0095396F /* MainViewController.swift */,
+				341EC54728BEA2F10095396F /* MainViewModel.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		9288B7BD2D2B9EF575D47CC2 /* Frameworks */ = {
@@ -157,7 +183,6 @@
 			files = (
 				341EC53B28BE97FF0095396F /* LaunchScreen.storyboard in Resources */,
 				341EC53828BE97FF0095396F /* Assets.xcassets in Resources */,
-				341EC53328BE97FC0095396F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,23 +236,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				341EC53628BE97FC0095396F /* Expify.xcdatamodeld in Sources */,
-				341EC53028BE97FC0095396F /* ViewController.swift in Sources */,
+				341EC53028BE97FC0095396F /* MainViewController.swift in Sources */,
 				341EC52C28BE97FC0095396F /* AppDelegate.swift in Sources */,
+				341EC54428BEA2660095396F /* MainCoordinator.swift in Sources */,
 				341EC52E28BE97FC0095396F /* SceneDelegate.swift in Sources */,
+				341EC54828BEA2F10095396F /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		341EC53128BE97FC0095396F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				341EC53228BE97FC0095396F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		341EC53928BE97FF0095396F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
