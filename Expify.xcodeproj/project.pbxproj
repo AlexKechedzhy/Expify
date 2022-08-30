@@ -14,6 +14,7 @@
 		341EC53628BE97FC0095396F /* Expify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 341EC53428BE97FC0095396F /* Expify.xcdatamodeld */; };
 		341EC53828BE97FF0095396F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 341EC53728BE97FF0095396F /* Assets.xcassets */; };
 		341EC53B28BE97FF0095396F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 341EC53928BE97FF0095396F /* LaunchScreen.storyboard */; };
+		DEC610157B80155CE75D6ED6 /* Pods_Expify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0739A14C1B9CA8435EBE6D4 /* Pods_Expify.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		341EC53728BE97FF0095396F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		341EC53A28BE97FF0095396F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		341EC53C28BE97FF0095396F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4C02683B4D71F603999638C /* Pods-Expify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expify.release.xcconfig"; path = "Target Support Files/Pods-Expify/Pods-Expify.release.xcconfig"; sourceTree = "<group>"; };
+		D0739A14C1B9CA8435EBE6D4 /* Pods_Expify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Expify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFEB6696B58EDBE912676EA2 /* Pods-Expify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expify.debug.xcconfig"; path = "Target Support Files/Pods-Expify/Pods-Expify.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEC610157B80155CE75D6ED6 /* Pods_Expify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2521754C5745958075CA5904 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FFEB6696B58EDBE912676EA2 /* Pods-Expify.debug.xcconfig */,
+				A4C02683B4D71F603999638C /* Pods-Expify.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		341EC51F28BE97FC0095396F = {
 			isa = PBXGroup;
 			children = (
 				341EC52A28BE97FC0095396F /* Expify */,
 				341EC52928BE97FC0095396F /* Products */,
+				2521754C5745958075CA5904 /* Pods */,
+				9288B7BD2D2B9EF575D47CC2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +87,14 @@
 			path = Expify;
 			sourceTree = "<group>";
 		};
+		9288B7BD2D2B9EF575D47CC2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0739A14C1B9CA8435EBE6D4 /* Pods_Expify.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 341EC53F28BE97FF0095396F /* Build configuration list for PBXNativeTarget "Expify" */;
 			buildPhases = (
+				676E1A79532308352960D9CF /* [CP] Check Pods Manifest.lock */,
 				341EC52428BE97FC0095396F /* Sources */,
 				341EC52528BE97FC0095396F /* Frameworks */,
 				341EC52628BE97FC0095396F /* Resources */,
+				16EB6444BD9EF0605770CDC5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,6 +162,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16EB6444BD9EF0605770CDC5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Expify/Pods-Expify-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Expify/Pods-Expify-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Expify/Pods-Expify-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		676E1A79532308352960D9CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Expify-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		341EC52428BE97FC0095396F /* Sources */ = {
@@ -286,6 +355,7 @@
 		};
 		341EC54028BE97FF0095396F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFEB6696B58EDBE912676EA2 /* Pods-Expify.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -298,6 +368,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -315,6 +386,7 @@
 		};
 		341EC54128BE97FF0095396F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4C02683B4D71F603999638C /* Pods-Expify.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -327,6 +399,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
