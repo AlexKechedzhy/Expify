@@ -96,7 +96,6 @@
 				341EC53728BE97FF0095396F /* Assets.xcassets */,
 				341EC53928BE97FF0095396F /* LaunchScreen.storyboard */,
 				341EC53C28BE97FF0095396F /* Info.plist */,
-				341EC53428BE97FC0095396F /* Expify.xcdatamodeld */,
 			);
 			path = Expify;
 			sourceTree = "<group>";
@@ -129,7 +128,7 @@
 		344872E028C38A3E003C095B /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				344872E128C38A53003C095B /* CoreDataManager.swift */,
+				344872EB28C3983E003C095B /* CoreDataManager */,
 				344872E628C395AF003C095B /* CloudKitManager.swift */,
 			);
 			path = Managers;
@@ -141,6 +140,15 @@
 				344872E428C38C4B003C095B /* CloudKitRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		344872EB28C3983E003C095B /* CoreDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				344872E128C38A53003C095B /* CoreDataManager.swift */,
+				341EC53428BE97FC0095396F /* Expify.xcdatamodeld */,
+			);
+			path = CoreDataManager;
 			sourceTree = "<group>";
 		};
 		9288B7BD2D2B9EF575D47CC2 /* Frameworks */ = {
