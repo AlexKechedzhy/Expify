@@ -23,6 +23,7 @@
 		349C175728C3A7660086C783 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349C175328C3A7660086C783 /* Category+CoreDataClass.swift */; };
 		349C175828C3A7660086C783 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349C175128C3A7660086C783 /* Category+CoreDataProperties.swift */; };
 		349C175C28C3C1090086C783 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349C175B28C3C1090086C783 /* R.generated.swift */; };
+		349C175D28C3C1EC0086C783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 341EC53728BE97FF0095396F /* Assets.xcassets */; };
 		DEC610157B80155CE75D6ED6 /* Pods_Expify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0739A14C1B9CA8435EBE6D4 /* Pods_Expify.framework */; };
 /* End PBXBuildFile section */
 
@@ -243,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				349C175D28C3C1EC0086C783 /* Assets.xcassets in Resources */,
 				341EC53B28BE97FF0095396F /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
