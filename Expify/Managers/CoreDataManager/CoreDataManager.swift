@@ -9,6 +9,8 @@ import Foundation
 import CoreData
 
 class CoreDataManager {
+    
+    static public let instance = CoreDataManager()
 
     lazy var persistentContainer: NSPersistentContainer = {
         let container: NSPersistentContainer
