@@ -135,8 +135,8 @@
 		344872E028C38A3E003C095B /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				349C175928C3BBE00086C783 /* CloudKitManager */,
 				344872EB28C3983E003C095B /* CoreDataManager */,
-				344872E628C395AF003C095B /* CloudKitManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -160,6 +160,14 @@
 				341EC53428BE97FC0095396F /* Expify.xcdatamodeld */,
 			);
 			path = CoreDataManager;
+			sourceTree = "<group>";
+		};
+		349C175928C3BBE00086C783 /* CloudKitManager */ = {
+			isa = PBXGroup;
+			children = (
+				344872E628C395AF003C095B /* CloudKitManager.swift */,
+			);
+			path = CloudKitManager;
 			sourceTree = "<group>";
 		};
 		9288B7BD2D2B9EF575D47CC2 /* Frameworks */ = {
