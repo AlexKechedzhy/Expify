@@ -16,6 +16,7 @@
 		341EC54428BEA2660095396F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341EC54328BEA2660095396F /* MainCoordinator.swift */; };
 		341EC54828BEA2F10095396F /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341EC54728BEA2F10095396F /* MainViewModel.swift */; };
 		344872E228C38A53003C095B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344872E128C38A53003C095B /* CoreDataManager.swift */; };
+		344872E528C38C4B003C095B /* CloudKitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344872E428C38C4B003C095B /* CloudKitRepository.swift */; };
 		DEC610157B80155CE75D6ED6 /* Pods_Expify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0739A14C1B9CA8435EBE6D4 /* Pods_Expify.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		341EC54328BEA2660095396F /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		341EC54728BEA2F10095396F /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		344872E128C38A53003C095B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		344872E428C38C4B003C095B /* CloudKitRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitRepository.swift; sourceTree = "<group>"; };
 		A4C02683B4D71F603999638C /* Pods-Expify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expify.release.xcconfig"; path = "Target Support Files/Pods-Expify/Pods-Expify.release.xcconfig"; sourceTree = "<group>"; };
 		D0739A14C1B9CA8435EBE6D4 /* Pods_Expify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Expify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFEB6696B58EDBE912676EA2 /* Pods-Expify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expify.debug.xcconfig"; path = "Target Support Files/Pods-Expify/Pods-Expify.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 		341EC52A28BE97FC0095396F /* Expify */ = {
 			isa = PBXGroup;
 			children = (
+				344872E328C38C27003C095B /* Repositories */,
 				341EC54228BEA2570095396F /* Coordinators */,
 				344872E028C38A3E003C095B /* Managers */,
 				341EC54528BEA2C90095396F /* Flow */,
@@ -122,6 +125,14 @@
 				344872E128C38A53003C095B /* CoreDataManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		344872E328C38C27003C095B /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				344872E428C38C4B003C095B /* CloudKitRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		9288B7BD2D2B9EF575D47CC2 /* Frameworks */ = {
@@ -248,6 +259,7 @@
 			files = (
 				341EC53628BE97FC0095396F /* Expify.xcdatamodeld in Sources */,
 				341EC53028BE97FC0095396F /* MainViewController.swift in Sources */,
+				344872E528C38C4B003C095B /* CloudKitRepository.swift in Sources */,
 				341EC52C28BE97FC0095396F /* AppDelegate.swift in Sources */,
 				341EC54428BEA2660095396F /* MainCoordinator.swift in Sources */,
 				341EC52E28BE97FC0095396F /* SceneDelegate.swift in Sources */,
