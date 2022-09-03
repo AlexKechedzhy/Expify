@@ -22,6 +22,7 @@
 		349C175628C3A7660086C783 /* Expense+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349C175428C3A7660086C783 /* Expense+CoreDataProperties.swift */; };
 		349C175728C3A7660086C783 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349C175328C3A7660086C783 /* Category+CoreDataClass.swift */; };
 		349C175828C3A7660086C783 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349C175128C3A7660086C783 /* Category+CoreDataProperties.swift */; };
+		349C175C28C3C1090086C783 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349C175B28C3C1090086C783 /* R.generated.swift */; };
 		DEC610157B80155CE75D6ED6 /* Pods_Expify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0739A14C1B9CA8435EBE6D4 /* Pods_Expify.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		349C175228C3A7660086C783 /* Expense+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Expense+CoreDataClass.swift"; path = "/Users/alex173/Desktop/Projects/Expify/Expify/Managers/CoreDataManager/Expense+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		349C175328C3A7660086C783 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Category+CoreDataClass.swift"; path = "/Users/alex173/Desktop/Projects/Expify/Expify/Managers/CoreDataManager/Category+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		349C175428C3A7660086C783 /* Expense+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Expense+CoreDataProperties.swift"; path = "/Users/alex173/Desktop/Projects/Expify/Expify/Managers/CoreDataManager/Expense+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		349C175B28C3C1090086C783 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		A4C02683B4D71F603999638C /* Pods-Expify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expify.release.xcconfig"; path = "Target Support Files/Pods-Expify/Pods-Expify.release.xcconfig"; sourceTree = "<group>"; };
 		D0739A14C1B9CA8435EBE6D4 /* Pods_Expify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Expify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFEB6696B58EDBE912676EA2 /* Pods-Expify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expify.debug.xcconfig"; path = "Target Support Files/Pods-Expify/Pods-Expify.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 		341EC51F28BE97FC0095396F = {
 			isa = PBXGroup;
 			children = (
+				349C175B28C3C1090086C783 /* R.generated.swift */,
 				341EC52A28BE97FC0095396F /* Expify */,
 				341EC52928BE97FC0095396F /* Products */,
 				2521754C5745958075CA5904 /* Pods */,
@@ -187,6 +190,7 @@
 			buildConfigurationList = 341EC53F28BE97FF0095396F /* Build configuration list for PBXNativeTarget "Expify" */;
 			buildPhases = (
 				676E1A79532308352960D9CF /* [CP] Check Pods Manifest.lock */,
+				349C175A28C3C0290086C783 /* ShellScript */,
 				341EC52428BE97FC0095396F /* Sources */,
 				341EC52528BE97FC0095396F /* Frameworks */,
 				341EC52628BE97FC0095396F /* Resources */,
@@ -263,6 +267,25 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Expify/Pods-Expify-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		349C175A28C3C0290086C783 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		676E1A79532308352960D9CF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -293,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				341EC53628BE97FC0095396F /* Expify.xcdatamodeld in Sources */,
+				349C175C28C3C1090086C783 /* R.generated.swift in Sources */,
 				349C175828C3A7660086C783 /* Category+CoreDataProperties.swift in Sources */,
 				349C175728C3A7660086C783 /* Category+CoreDataClass.swift in Sources */,
 				341EC53028BE97FC0095396F /* MainViewController.swift in Sources */,
