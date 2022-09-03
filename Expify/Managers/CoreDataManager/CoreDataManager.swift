@@ -11,6 +11,12 @@ import CoreData
 class CoreDataManager {
     
     static public let instance = CoreDataManager()
+    
+    lazy var managedObjectContext: NSManagedObjectContext = {
+        let viewContext = persistentContainer.viewContext
+        viewContext.automaticallyMergesChangesFromParent = true
+        return viewContext
+    }()
 
     lazy var persistentContainer: NSPersistentContainer = {
         let container: NSPersistentContainer
