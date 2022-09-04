@@ -11,5 +11,6 @@ target 'Expify' do
 	pod 'R.swift'
 	pod 'SnapKit'
 	pod 'SwiftLint'
+	pod 'Charts'
 
 end

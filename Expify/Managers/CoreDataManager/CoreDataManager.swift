@@ -47,5 +47,21 @@ class CoreDataManager {
             }
         }
     }
+    
+    func configureCategoryResultsController(delegate: NSFetchedResultsControllerDelegate) -> NSFetchedResultsController<Category>? {
+        let request = NSFetchRequest<Category>(entityName: "Category")
+        request.sortDescriptors = [NSSortDescriptor(key: "dateCreated", ascending: false)]
+        let fetchResultController = NSFetchedResultsController(fetchRequest: request,
+                                                          managedObjectContext: persistentContainer.viewContext,
+                                                          sectionNameKeyPath: nil, cacheName: nil)
+        fetchResultController.delegate = delegate
+        do {
+            try fetchResultController.performFetch()
+            return fetchResultController
+        } catch {
+            print(error)
+            return nil
+        }
+    }
 
 }

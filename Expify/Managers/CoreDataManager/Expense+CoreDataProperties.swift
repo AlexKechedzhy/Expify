@@ -19,5 +19,7 @@ extension Expense {
     @NSManaged public var amount: Double
     @NSManaged public var dateCreated: Date?
     @NSManaged public var id: UUID?
-
+    @NSManaged public var note: String?
+    @NSManaged public var category: Category?
+    
 }
