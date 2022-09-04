@@ -16,7 +16,7 @@ protocol MainCoordinatorInteface: Coordinator {
     
 }
 
-class MainCoordinator: MainViewModelInteface {
+class MainCoordinator: MainCoordinatorInteface {
     
     private let navigationController: UINavigationController
     
@@ -27,7 +27,7 @@ class MainCoordinator: MainViewModelInteface {
         navigationController.pushViewController(mainController, animated: false)
     }
     
-    init(navigationController: UINavigationController) {
+    required init(navigationController: UINavigationController) {
         self.navigationController = navigationController
         self.navigationController.navigationBar.isHidden = true
     }
